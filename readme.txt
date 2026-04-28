@@ -1,0 +1,1 @@
+this the git repo of my android studio final term lab task including(labtask10 to labtask14)
