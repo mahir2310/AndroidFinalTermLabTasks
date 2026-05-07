@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">UserSettingsApp</string>
+    <string name="student_portal_settings">Student Portal Settings</string>
+    <string name="saved_settings">Saved Settings</string>
+    <string name="profile_setup">Profile Setup</string>
+    <string name="student_name">Student Name</string>
+    <string name="theme">Theme</string>
+    <string name="notifications">Notifications</string>
+    <string name="language">Language</string>
+    <string name="font_size_label">Font Size</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="reset_default">Reset to Default</string>
+    <string name="view_saved_settings">View Saved Settings</string>
+    <string name="edit">Edit</string>
+    <string name="back">Back</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="student_id">Student ID</string>
+    <string name="full_name">Full Name</string>
+    <string name="department">Department</string>
+    <string name="year_of_study">Year of Study</string>
+    <string name="email">Email</string>
+    <string name="welcome_back">Welcome back, %1$s!</string>
+    <string name="font_size_format">Font Size: %1$dsp</string>
+    <string name="last_saved_format">Last Saved: %1$s</string>
+    <string name="no_settings_saved">No settings saved. Go back and save your preferences.</string>
+    <string name="default_welcome_back">Welcome back, Student!</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_system">System Default</string>
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System Default</item>
+    </string-array>
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Bangla</item>
+        <item>Arabic</item>
+        <item>French</item>
+    </string-array>
+    <string-array name="department_options">
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>BBA</item>
+        <item>English</item>
+        <item>Law</item>
+    </string-array>
+    <string-array name="year_options">
+        <item>1st Year</item>
+        <item>2nd Year</item>
+        <item>3rd Year</item>
+        <item>4th Year</item>
+    </string-array>
 </resources>
