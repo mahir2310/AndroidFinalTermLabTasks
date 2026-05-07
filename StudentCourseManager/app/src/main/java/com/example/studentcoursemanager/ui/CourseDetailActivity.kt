@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.studentcoursemanager.R
 import com.example.studentcoursemanager.model.Course
 import com.example.studentcoursemanager.repo.FirebaseCourseRepository
+import com.example.studentcoursemanager.util.CourseFormValidator
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -138,19 +139,18 @@ class CourseDetailActivity : AppCompatActivity() {
     }
 
     private fun validate(): Boolean {
-        var ok = true
-        if (etName.text.toString().trim().isEmpty()) {
-            tilName.error = "Required"
-            ok = false
-        } else tilName.error = null
-        if (etCode.text.toString().trim().isEmpty()) {
-            tilCode.error = "Required"
-            ok = false
-        } else tilCode.error = null
-        if (etInstructor.text.toString().trim().isEmpty()) {
-            tilInstructor.error = "Required"
-            ok = false
-        } else tilInstructor.error = null
-        return ok
+        val result = CourseFormValidator.validate(
+            name = etName.text?.toString().orEmpty(),
+            code = etCode.text?.toString().orEmpty(),
+            instructor = etInstructor.text?.toString().orEmpty(),
+            schedule = etSchedule.text?.toString().orEmpty(),
+            room = etRoom.text?.toString().orEmpty(),
+            semester = spinnerSemester.selectedItem?.toString().orEmpty()
+        )
+
+        tilName.error = result.errors["name"]
+        tilCode.error = result.errors["code"]
+        tilInstructor.error = result.errors["instructor"]
+        return result.isValid
     }
 }
