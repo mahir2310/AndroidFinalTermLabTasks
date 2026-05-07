@@ -24,4 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "UserSettingsApp"
 include(":app")
+include(":app")
  
