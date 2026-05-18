@@ -89,7 +89,8 @@ class SettingsViewerActivity : AppCompatActivity() {
         tvThemeValue.text = when (theme.lowercase()) {
             "dark" -> "Dark"
             "system" -> "System Default"
-            else -> "Light"
+            "light" -> "Light"
+            else -> theme.ifBlank { "Light" }
         }
         tvNotifValue.text = if (notifications) "Enabled" else "Disabled"
         tvLangValue.text = language
