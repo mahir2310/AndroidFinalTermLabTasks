@@ -86,7 +86,11 @@ class SettingsViewerActivity : AppCompatActivity() {
         val fontSize = settings.getInt(PreferencesContract.KEY_FONT_SIZE, PreferencesContract.DEFAULT_FONT_SIZE)
         val studentName = profile.getString(PreferencesContract.KEY_STUDENT_NAME, "").orEmpty().ifBlank { "Not provided" }
 
-        tvThemeValue.text = theme.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }
+        tvThemeValue.text = when (theme.lowercase()) {
+            "dark" -> "Dark"
+            "system" -> "System Default"
+            else -> "Light"
+        }
         tvNotifValue.text = if (notifications) "Enabled" else "Disabled"
         tvLangValue.text = language
         tvFontValue.text = getString(R.string.font_size_format, fontSize)
